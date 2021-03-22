@@ -23,21 +23,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <img src="https://i.pinimg.com/originals/40/3f/e2/403fe2b99e059c3cc401a614635e3689.jpg" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#dtb" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-bars w3-xxlarge"></i>
+    <p>DEC to BIN</p>
+  </a>
+  <a href="#dth" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-bars w3-xxlarge"></i>
     <p>DEC to HEX</p>
   </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#dto" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-bars w3-xxlarge"></i>
     <p>DEC to OCT</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-bars w3-xxlarge"></i>
-    <p>BIN to DEC</p>
   </a>
 </nav>
 
@@ -45,25 +45,25 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    <a href="#dtb" class="w3-bar-item w3-button" style="width:25% !important">DEC BIN</a>
+    <a href="#dth" class="w3-bar-item w3-button" style="width:25% !important">DEC HEX</a>
+    <a href="#dto" class="w3-bar-item w3-button" style="width:25% !important">DEC OCT</a>
   </div>
 </div>
 
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <header class="w3-container w3-padding-32 w3-center w3-black" >
     <h1 class="w3-jumbo"><span class="w3-hide-small">✔ DATA CONVERTER PRO ✔</h1>
-    <p>✨PREMIUM PRIME PLUS DELUXE - VALUE PACK✨ membership - all included</p>
-    <img src="https://i.pinimg.com/originals/40/3f/e2/403fe2b99e059c3cc401a614635e3689.jpg" alt="boy" class="w3-image" width="400">
+    <p>✨PREMIUM PRIME PLUS DELUXE - VALUE PACK✨<br>all included</p>
+    <img src="https://i.pinimg.com/originals/40/3f/e2/403fe2b99e059c3cc401a614635e3689.jpg" alt="boy" class="w3-image" id="home" width="400">
   </header>
 
   <!-- START OF FORMULAS -->
 
   <!-- Decimal to Bin -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="dtb">
     <h2 class="w3-text-light-grey">DECIMAL TO BINARY</h2>
     <hr style="width:200px" class="w3-opacity">
         	<h3>Calculator</h3>
@@ -82,35 +82,38 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 			<li>Get the remainder and multiply by 2 for the binary digit.</li>
 			<li>Repeat the steps until the quotient is equal to 0.</li>
     	</ol>
-    	<h3>example:</h3>
-    	<p>Convert the Decimal number 512 to the Binary number system</p>
-    	<ol>
-    		<li>512 / 2 = 256.5, the remainder is 0 => <script type="text/javascript">for(let i = 0; i < 49; i++){document.write("&nbsp;")}</script> 0️⃣ = 0</li>
-    		<li>256 / 2 = 128, we multiply the remainder by 2 which is 0.5 *2 => 1️⃣ = 1</li>
-    		<li>128 / 2 = 64, the remainder is 0 => <script type="text/javascript">for(let i = 0; i < 53; i++){document.write("&nbsp;")}</script> 2️⃣ = 0 </li>
-    		<li>64 / 2 = 32, the remainder is 0 => <script type="text/javascript">for(let i = 0; i < 55; i++){document.write("&nbsp;")}</script>  3️⃣ = 0  </li>
-    		<li>32 / 2 = 16, the remainder is 0 => <script type="text/javascript">for(let i = 0; i < 56; i++){document.write("&nbsp;")}</script> 4️⃣ = 0 </li>
-    		<li>16 / 2 = 8, the remainder is 0 => <script type="text/javascript">for(let i = 0; i < 58; i++){document.write("&nbsp;")}</script> 5️⃣ = 0 </li>
-    		<li>8 / 2 = 4, the remainder is 0 => <script type="text/javascript">for(let i = 0; i < 59; i++){document.write("&nbsp;")}</script> 6️⃣ = 0 </li>
-    		<li>4 / 2 = 2, the remainder is 0 => <script type="text/javascript">for(let i = 0; i < 59; i++){document.write("&nbsp;")}</script> 7️⃣ = 0 </li>
-    		<li>2 / 2 = 1, the remainder is 0 => <script type="text/javascript">for(let i = 0; i < 60; i++){document.write("&nbsp;")}</script> 8️⃣ = 0 </li>
-    		<li>1 / 2 = 0.5, the remainder is 0 => <script type="text/javascript">for(let i = 0; i < 57; i++){document.write("&nbsp;")}</script> 9️⃣ = 1 </li>
-    	</ol>
-    	<p>the result is 1000000010 = 512</p>
   <!-- end of Decimal to Bin -->
     </p>
 
 
   <!-- Decimal to Hex -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="dth">
     <h2 class="w3-text-light-grey">DECIMAL TO HEXADECIMAL</h2>
     <hr style="width:200px" class="w3-opacity">
+    <h3>Calculator</h3>
+
+    <input type="number" id="decToHex" name="decToHex"
+ min="0" max="2147483647">
+    <input type="button" value="calculate" onclick="decToHex()">
+
+    <div id="decToHexResultBox">
+      <p id="decToHexResult"></p>
+    </div>
+
+    <hr style="width:200px" class="w3-opacity">
     <p>
+      <h3>method:</h3>
+    	<ol>
+	    	<li>Divide the number by 16.
+			<li>Get the integer quotient for the next iteration.</li>
+			<li>Get the remainder and multiply by 16 for the HEX digit.</li>
+			<li>Repeat the steps until the quotient is equal to 0.</li>
+    	</ol>
     	text
   <!-- end of Decimal to Hex -->
     </p>
   <!-- Decimal to Oct -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="dto">
     <h2 class="w3-text-light-grey">DECIMAL TO OCTAL</h2>
     <hr style="width:200px" class="w3-opacity">
     <p>
