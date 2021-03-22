@@ -22,11 +22,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-  <img src="https://i.pinimg.com/originals/40/3f/e2/403fe2b99e059c3cc401a614635e3689.jpg" style="width:100%">
-  <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
+  <img src="https://i.pinimg.com/originals/40/3f/e2/403fe2b99e059c3cc401a614635e3689.jpg" style="width:100%;">
+
   <a href="#dtb" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-bars w3-xxlarge"></i>
     <p>DEC to BIN</p>
@@ -37,17 +34,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </a>
   <a href="#dto" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-bars w3-xxlarge"></i>
-    <p>DEC to OCT</p>
+    <p>BIN to DEC</p>
+  </a>
+  <a href="#dto" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-bars w3-xxlarge"></i>
+    <p>HEX to DEC</p>
   </a>
 </nav>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
     <a href="#dtb" class="w3-bar-item w3-button" style="width:25% !important">DEC BIN</a>
     <a href="#dth" class="w3-bar-item w3-button" style="width:25% !important">DEC HEX</a>
-    <a href="#dto" class="w3-bar-item w3-button" style="width:25% !important">DEC OCT</a>
+    <a href="#dto" class="w3-bar-item w3-button" style="width:25% !important">BIN DEC</a>
+    <a href="#dto" class="w3-bar-item w3-button" style="width:25% !important">HEX DEC</a>
   </div>
 </div>
 
@@ -77,10 +78,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>
     	    <h3>method:</h3>
     	<ol>
-	    	<li>Divide the number by 2.
-			<li>Get the integer quotient for the next iteration.</li>
-			<li>Get the remainder and multiply by 2 for the binary digit.</li>
-			<li>Repeat the steps until the quotient is equal to 0.</li>
+        <li>Divide the number by 2.</li>
+        <li>Get the integer quotient for the next iteration.</li>
+        <li>Get the remainder and multiply by 2 for the binary digit.</li>
+        <li>Repeat the steps until the quotient is equal to 0.</li>
     	</ol>
   <!-- end of Decimal to Bin -->
     </p>
@@ -102,72 +103,58 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <hr style="width:200px" class="w3-opacity">
     <p>
-      <h3>method:</h3>
-    	<ol>
-	    	<li>Divide the number by 16.
-			<li>Get the integer quotient for the next iteration.</li>
-			<li>Get the remainder and multiply by 16 for the HEX digit.</li>
-			<li>Repeat the steps until the quotient is equal to 0.</li>
-    	</ol>
-    	text
+        <h3>method:</h3>
+        <ol>
+          <li>Divide the number by 16.</li>
+          <li>Get the integer quotient for the next iteration.</li>
+          <li>Get the remainder and multiply by 16 for the HEX digit.</li>
+          <li>Repeat the steps until the quotient is equal to 0.</li>
+        </ol>
+
   <!-- end of Decimal to Hex -->
     </p>
-  <!-- Decimal to Oct -->
+  <!-- Bin to Dec -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="dto">
-    <h2 class="w3-text-light-grey">DECIMAL TO OCTAL</h2>
+    <h2 class="w3-text-light-grey">BINARY TO DECIMAL</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <h3>Calculator</h3>
+    <input type="number" id="binToDec" name="binToDec" min="0" max="2147483647">
+    <input type="button" value="calculate" onclick="binToDec()">
+    <div id="binToDecResultBox">
+    <p id="binToDecResult"></p>
+    </div>
     <hr style="width:200px" class="w3-opacity">
     <p>
-    	text
-  <!-- end of Decimal to Oct -->
+        <h3>method:</h3>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+  <!-- end of Bin to Dec -->
     </p> 
-  <!--  -->
+  <!-- Hex to Dec -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">DECIMAL TO BINARY</h2>
+    <h2 class="w3-text-light-grey">HEXADECIMAL TO DECIMAL</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <h3>Calculator</h3>
+    <input type="number" id="hexToDec" name="hexToDec" min="0" max="2147483647">
+    <input type="button" value="calculate" onclick="hexToDec()">
+    <div id="hexToDecResultBox">
+    <p id="hexToDecResult"></p>
+    </div>
     <hr style="width:200px" class="w3-opacity">
     <p>
-    	text
-  <!--  -->
+        <h3>method:</h3>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+  <!-- end of Hex to Dec -->
     </p>
-  <!--  -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">DECIMAL TO HEXADECIMAL</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>
-    	text
-  <!--  -->
-    </p>
-  <!--  -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">DECIMAL TO OCTAL</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>
-    	text
-  <!--  -->
-    </p>   
-  <!--  -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">DECIMAL TO BINARY</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>
-    	text
-  <!--  -->
-    </p>
-  <!--  -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">DECIMAL TO HEXADECIMAL</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>
-    	text
-  <!--  -->
-    </p>
-  <!--  -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">DECIMAL TO OCTAL</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>
-    	text
-  <!--  -->
-    </p> 
   <!-- END OF FORMULAS -->
 
 
@@ -179,7 +166,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.facebook.com/people/Daniel-Massoudyan/100009332604564" target="_blank" class="w3-hover-text-green">Daniel Massoudyan</a></p>
+    <p class="w3-medium">Powered by <a href="https://github.com/massoudyan1" target="_blank" class="w3-hover-text-green">Daniel Massoudyan</a></p>
   <!-- End footer -->
   </footer>
 
