@@ -1,2 +1,2 @@
-## Converts Decimal to Binary
-## Converts Decimal to Hexadecimal
+## 1️⃣0️⃣ Converts Decimal to Binary
+## 6️⃣ Converts Decimal to Hexadecimal 
